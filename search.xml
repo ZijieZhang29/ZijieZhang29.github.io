@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Notes Of MCM]]></title>
+    <url>%2F2018%2F01%2F25%2FNotesOfMCM%2F</url>
+    <content type="text"><![CDATA[建模时要考虑的几点复杂度确定模型中的变量数学化函数 ODE 规划 ... 模型优化分解成定理 减少计算冗余 图形化（加分项） 有时可以简化条件 误差分析最优解有精力多做几个模型，关于初始模型的简化和进一步分析 灵敏度分析x抖动一下f(x)抖动范围误差对结论的影响]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>MCM</tag>
+        <tag>Notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo+Github: 搭建属于自己的静态博客]]></title>
     <url>%2F2018%2F01%2F25%2FHexo-Github-%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[先贴一下Hexo中文官网首先呢，我们建一个个人的blog就三个小目标任何人，任何时间，任何地点，都可以快速访问 为了达到这些目标我们需要几个工具在公网上找个地方放博客的文件：这里我选择Github在公网上有一个属于你自己的域名/地址（通俗点说就是别人要访问你的博客，你得告诉他们你的博客在哪）搭建博客的工具：这里我选择Hexo Github仓库搭建创建Github账号创建与账号同名的Repository在Repository name中填写你的Github账号名.github.io 配置SSH1) 生成SSH检查是否已经有SSH Key, 打开Terminal，输入1cd ~/.ssh 如果没有这个目录，则生成一个新的SSH，输入1ssh-keygen -t rsa -C &quot;your e-mail&quot; 其中，your e-mail是你注册Github时用到的邮箱。下面就按Enter就好 2）复制公钥内容到Github账户信息中打开~/.ssh/id_rsa.pub文件，复制里面的内容打开Github,点击头像-&gt;setting-&gt;SSH Keys-&gt;Add SSH key-&gt;填写title(随意)-&gt;复制的内容粘贴到Key框-&gt;Add key 3) 测试SSH是否配置成功在Terminal输入1ssh -T git@github.com 若显示如下,则说明ssh配置成功1Hi username! You&apos;ve successfully authenticated, but GitHub does not provide shell access. 安装和配置Hexo主要参照Hexo官网在Terminal里面运行下面命令1234brew install gitcurl https://raw.github.com/creationix/nvm/master/install.sh | shnvm install stablenpm install -g hexo-cli 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install 新建完成后，指定文件夹的目录如下：12345678.├── _config.yml├── package.json├── scaffolds├── source| ├── _drafts| └── _posts└── themes _config.yml网站的配置信息，您可以在此配置大部分的参数。 source资源文件夹是存放用户资源的地方。除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。 themes主题 文件夹。Hexo 会根据主题来生成静态页面。 配置可以在 _config.yml 中修改大部份的配置。 网站 参数 描述 title 网站标题 subtitle 网站副标题 description 网站描述 author 您的名字 language 网站使用的语言 timezone 网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。 其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。 引用来自 指令new1$ hexo new [layout] &lt;title&gt; 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。 generate1$ hexo generate 生成静态文件。该命令可以简写为1$ hexo g server1$ hexo server 启动服务器。默认情况下，访问网址为： http://localhost:4000/。 deploy1$ hexo deploy 该命令可以简写为：1$ hexo d deploy 和 generate 可以连在一起用12$ hexo d -g$ hexo g -d （貌似有先后顺序，用的时候注意一下） clean1$ hexo clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。 clean之后再执行generate/deploy 会避免一些错误 部署Git安装hexo-deployer-git1$ npm install hexo-deployer-git --save 修改配置12345deploy: type: git repo: &lt;repository url&gt; branch: [branch] message: [message] 安装主题（theme）Example：NEXT 主题 git clone https://github.com/theme-next/hexo-theme-next themes/next 域名可以访问 http://`GitHub仓库名`.github.io或者绑定域名域名购买可以选择国内的万网或国外的Goddady 至此，建站完成！]]></content>
