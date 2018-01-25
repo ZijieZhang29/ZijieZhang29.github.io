@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo+Github: 搭建属于自己的静态博客]]></title>
+    <url>%2F2018%2F01%2F25%2FHexo-Github-%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[先贴一下Hexo中文官网首先呢，我们建一个个人的blog就三个小目标任何人，任何时间，任何地点，都可以快速访问 为了达到这些目标我们需要几个工具在公网上找个地方放博客的文件：这里我选择Github在公网上有一个属于你自己的域名/地址（通俗点说就是别人要访问你的博客，你得告诉他们你的博客在哪）搭建博客的工具：这里我选择Hexo Github仓库搭建创建Github账号创建与账号同名的Repository在Repository name中填写你的Github账号名.github.io 配置SSH1) 生成SSH检查是否已经有SSH Key, 打开Terminal，输入1cd ~/.ssh 如果没有这个目录，则生成一个新的SSH，输入1ssh-keygen -t rsa -C &quot;your e-mail&quot; 其中，your e-mail是你注册Github时用到的邮箱。下面就按Enter就好 2）复制公钥内容到Github账户信息中打开~/.ssh/id_rsa.pub文件，复制里面的内容打开Github,点击头像-&gt;setting-&gt;SSH Keys-&gt;Add SSH key-&gt;填写title(随意)-&gt;复制的内容粘贴到Key框-&gt;Add key 3) 测试SSH是否配置成功在Terminal输入1ssh -T git@github.com 若显示如下,则说明ssh配置成功1Hi username! You&apos;ve successfully authenticated, but GitHub does not provide shell access. 安装和配置Hexo主要参照Hexo官网在Terminal里面运行下面命令1234brew install gitcurl https://raw.github.com/creationix/nvm/master/install.sh | shnvm install stablenpm install -g hexo-cli 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install 新建完成后，指定文件夹的目录如下：12345678.├── _config.yml├── package.json├── scaffolds├── source| ├── _drafts| └── _posts└── themes _config.yml网站的配置信息，您可以在此配置大部分的参数。 source资源文件夹是存放用户资源的地方。除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。 themes主题 文件夹。Hexo 会根据主题来生成静态页面。 配置可以在 _config.yml 中修改大部份的配置。 网站 参数 描述 title 网站标题 subtitle 网站副标题 description 网站描述 author 您的名字 language 网站使用的语言 timezone 网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。 其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。 引用来自 指令new1$ hexo new [layout] &lt;title&gt; 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。 generate1$ hexo generate 生成静态文件。该命令可以简写为1$ hexo g server1$ hexo server 启动服务器。默认情况下，访问网址为： http://localhost:4000/。 deploy1$ hexo deploy 该命令可以简写为：1$ hexo d deploy 和 generate 可以连在一起用12$ hexo d -g$ hexo g -d （貌似有先后顺序，用的时候注意一下） clean1$ hexo clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。 clean之后再执行generate/deploy 会避免一些错误 部署Git安装hexo-deployer-git1$ npm install hexo-deployer-git --save 修改配置12345deploy: type: git repo: &lt;repository url&gt; branch: [branch] message: [message] 安装主题（theme）Example：NEXT 主题 git clone https://github.com/theme-next/hexo-theme-next themes/next 域名可以访问 http://`GitHub仓库名`.github.io或者绑定域名域名购买可以选择国内的万网或国外的Goddady 至此，建站完成！]]></content>
+      <categories>
+        <category>TechShare</category>
+      </categories>
+      <tags>
+        <tag>干货</tag>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+        <tag>Blog</tag>
+        <tag>Personal Website</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[写作要点和规范 by Hannah]]></title>
     <url>%2F2018%2F01%2F25%2F%E5%86%99%E4%BD%9C%E8%A6%81%E7%82%B9%E5%92%8C%E8%A7%84%E8%8C%83%20by%20Hannah%2F</url>
     <content type="text"><![CDATA[小节划分突出重点。假设条件及可以用列表的：编号化。图表。 问题重述对赛题的解读（自己的解读）、对现有研究成果的综述与评论、以及对解题思路和主要方法的简要介绍。 非常重要。浅显易懂、少用数学表达式 论文主体1.假设条件和解释 2.模型设计——系统模型 先从简单开始 逐步加工 建模时应集中精力设计一个模型，或者最终能导出一个较好模型的一系列子模型。不要分散精力，拼凑出几个很一般的模型。 普遍模型 结论描述模型的测试方法以及所得到的结果。应该对所建立的数学模型进行敏感性分析和稳定性测试，使模型更具有说服力。模型通常会用到一些参数，在结论中应该讨论这些参数的轻微变化对模型及结论产生的影响。几乎每篇论文都会存在缺陷。评委肯定也会发现这些缺陷，所以在写结论时应该明确指出这些缺陷，思考过如何改进和修补。 摘要赛题重述与阐明：用自己的语言描述将要解决的问题； 解释假设条件及其合理性：强调建模所用假设，而且清楚地列出建模所需的所有变量； 模型设计及合理性论证：指出所用模型的类型或构造新的模型； 描述模型的测试情况及灵敏度分析：包括误差分析等检测项目； 优缺点讨论：包括模型及解题方法的优点与不足。 摘要不能包含太多的细节，但必须简明扼要地将解题方法描述清楚，包含全部要点及主要思路，并阐明所得出的结论。如果有数值运算，还应该给出重要的计算结果。最好不要在摘要中使用数学公式。 写作规范1.用we 2.使用简单时态 3.主动语态 4.简单句子 5.简单段落 6.使用有具体含义的词汇，例如用equation代替expression 7.不要有琐碎细节，例如常规计算过程。 8.主要论点放句首，加粗。假设、合理性论证，用列表形式表现。 9.删除多余词汇。 10.使用并列短语强调相似性。 11.避免单调重复（句式方面） 12.不使用同一词汇描述不同对象 13.代词所指必须清楚 14.不要过分渲染 英语语法会被发现 如果反复会影响 论文修改内容、格式、语法 引用资料需要标明出处 论文用11或12号字比较合适 数学符号字母用斜体 给图表编号，并且要做相应解释评论。对图形和表格，要有标题、变量、图例、简短的文字解释 数学表达式和句子不要用数学符号开头 用文字分隔相邻的表达式 以文字叙述为主 每一个if都应该与一个then相配 不要超负荷使用同一个词汇，例如element可用component 提供必要的提示，给阅读者便利，例如提醒the matrix A 术语应该在即将被使用时定义。例如A function is smooth if it infinitely differentiable. Suppose that f is a smooth function. 如何排列数学表达式：注意单行或同行。如果用了as follows应加： 等式应该在等号处对齐 书写序列时在省略号处对齐]]></content>
