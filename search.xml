@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Daily Coding]]></title>
+    <url>%2F2018%2F04%2F09%2FDaily-Coding%2F</url>
+    <content type="text"><![CDATA[#include&lt;废话头文件&gt;using namespace 废话; int main(){ 出国 -&gt; 增加经历 -&gt; {暑研 &amp; 实习}; 暑研 -&gt; Searching; 实习 -&gt; 技术岗 -&gt; 编程素养证明 -&gt; 逛的OJ太多 but 没一个拿的出手 &amp; 写了好多项目自己觉得不够完美没传Github; # so 申请一个POJ新号重新刷 1001，水题。 1002，水。 1003，水。 1004，水。 1005，水。 1006，水。 1007，水。 1008，水。 选编译器 C++, not G++。 后者慢 &amp; 对于我的编程习惯 用C++编译CE少。 最后，卡输出的出题人应该拉出去枪毙三回[微笑]; return 0; }]]></content>
+      <categories>
+        <category>Code&amp;Remark</category>
+      </categories>
+      <tags>
+        <tag>POJ</tag>
+        <tag>Record</tag>
+        <tag>Notes</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Notes Of MCM]]></title>
     <url>%2F2018%2F01%2F25%2FNotesOfMCM%2F</url>
     <content type="text"><![CDATA[建模时要考虑的几点复杂度确定模型中的变量数学化函数 ODE 规划 ... 模型优化分解成定理 减少计算冗余 图形化（加分项） 有时可以简化条件 误差分析最优解有精力多做几个模型，关于初始模型的简化和进一步分析 灵敏度分析x抖动一下f(x)抖动范围误差对结论的影响]]></content>
@@ -8,8 +22,8 @@
         <category>Study</category>
       </categories>
       <tags>
-        <tag>MCM</tag>
         <tag>Notes</tag>
+        <tag>MCM</tag>
       </tags>
   </entry>
   <entry>
